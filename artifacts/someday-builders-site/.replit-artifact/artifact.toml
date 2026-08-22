@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Someday Builders"
+description = "Imported static landing page for Someday Builders, a community and retreat experience centered on meaningful work, reflection, and connection."
+version = "1.0.0"
+id = "artifacts/someday-builders-site"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 22485
+
+[services.development]
+run = "pnpm --filter @workspace/someday-builders-site run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/someday-builders-site", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/someday-builders-site/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22485"
+BASE_PATH = "/"

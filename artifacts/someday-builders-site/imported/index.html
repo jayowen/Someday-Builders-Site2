@@ -1,0 +1,1268 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Someday Builders | Share Your Someday Story</title>
+  <meta name="description" content="Creating legacies by building healthy, Christ-centered marriages and families from the start through science, spiritual formation, and community. Share your someday story.">
+  <meta property="og:title" content="Someday Builders">
+  <meta property="og:description" content="Creating legacies by building healthy, Christ-centered marriages and families from the start through science, spiritual formation, and community.">
+  <meta property="og:type" content="website">
+  <!-- og card: assets/og-card.png (1200x630) is built and deploys with the site.
+       Source: assets/og-card.html; re-export at 1200x630 if the lockup changes.
+       LAUNCH: confirm the absolute URL below matches the live domain. -->
+  <meta property="og:image" content="https://somedaybuilders.com/assets/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='12'%20fill='%23F7F4ED'/%3E%3Ctext%20x='32'%20y='45'%20font-family='Georgia,serif'%20font-style='italic'%20font-size='40'%20text-anchor='middle'%20fill='%23789B7A'%3ES%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,500;1,600&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ivory: #F7F4ED;
+      --stone: #FCFBF8;
+      --green: #4F6A5B;
+      --slate: #50575E;
+      --gold: #B89A5D;
+      --navy: #23364A;
+      --crimson: #B21A1A;
+      --terracotta: #B9785C;
+      --sage-tint: rgba(140, 155, 122, 0.14);
+      --hairline: rgba(184, 154, 93, 0.35);
+      --hairline-soft: rgba(184, 154, 93, 0.18);
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { transition: none !important; animation: none !important; }
+    }
+    body {
+      background: var(--ivory);
+      color: var(--slate);
+      font-family: var(--sans);
+      font-weight: 400;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    [hidden] { display: none !important; }
+    img { max-width: 100%; height: auto; display: block; }
+    h1, h2, h3 { font-family: var(--serif); font-weight: 600; color: var(--green); }
+    .visually-hidden {
+      position: absolute;
+      width: 1px; height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+    }
+
+    /* ---------- Shared keepsake details ---------- */
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.9rem;
+      font-family: var(--sans);
+      font-weight: 600;
+      font-size: 0.72rem;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.4rem;
+    }
+    .eyebrow::before, .eyebrow::after {
+      content: "";
+      width: 34px;
+      height: 1px;
+      background: var(--hairline);
+    }
+    .rule {
+      width: 72px;
+      height: 1px;
+      background: var(--gold);
+      margin: 0 auto;
+    }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1.75rem 1.25rem 2.5rem;
+      position: relative;
+      text-align: center;
+    }
+    @media (min-width: 900px) {
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 20px;
+        border: 1px solid rgba(184, 154, 93, 0.28);
+        pointer-events: none;
+      }
+    }
+    /* Client wordmark PNG: background is exactly Foundation Ivory (#F7F4ED),
+       the page background, so it sits seamlessly. */
+    .brand-logo {
+      width: min(220px, 58vw);
+      height: auto;
+      margin: 0 auto 1.1rem;
+    }
+    .hero-headline {
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: clamp(1.9rem, 6.2vw, 4rem);
+      line-height: 1.12;
+      color: var(--green);
+      max-width: 15em;
+      text-wrap: balance;
+      margin: 0 auto 0.7rem;
+    }
+    .hero-sub {
+      font-family: var(--sans);
+      font-weight: 300;
+      font-size: clamp(0.98rem, 2.6vw, 1.15rem);
+      line-height: 1.45;
+      color: var(--slate);
+      max-width: 30em;
+      margin: 0 auto 0.7rem;
+    }
+    /* Terracotta matches the Aug 2026 eucalyptus brand refresh (brand asset
+       tagline-terracotta.png sets this line in terracotta). */
+    .tagline {
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 400;
+      font-size: 0.85rem;
+      letter-spacing: 0.09em;
+      color: var(--terracotta);
+      margin-bottom: 1.25rem;
+    }
+    @media (min-width: 900px) {
+      .tagline { font-size: 0.95rem; }
+    }
+
+    /* ---------- Intake card: the finest object on the page ---------- */
+    .intake-card {
+      background: var(--stone);
+      border: 1px solid var(--hairline);
+      border-radius: 6px;
+      width: 100%;
+      max-width: 470px;
+      margin: 0 auto;
+      padding: 2rem 1.75rem 1.9rem;
+      position: relative;
+      text-align: left;
+      box-shadow: 0 1px 0 rgba(184, 154, 93, 0.12);
+    }
+    .intake-card::before {
+      content: "";
+      position: absolute;
+      inset: 7px;
+      border: 1px solid var(--hairline-soft);
+      border-radius: 4px;
+      pointer-events: none;
+    }
+    /* Steps are <section>s; keep the global section padding out of the card */
+    .intake-card .step { padding: 0; }
+    .intake-title {
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 600;
+      font-size: 1.35rem;
+      color: var(--green);
+      text-align: center;
+      margin-bottom: 1rem;
+      line-height: 1.25;
+    }
+    .dots {
+      display: flex;
+      justify-content: center;
+      gap: 0.65rem;
+      margin-bottom: 1.35rem;
+    }
+    .dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: transparent;
+      border: 1px solid var(--gold);
+      transition: background 250ms ease, transform 250ms ease;
+    }
+    .dot.active { background: var(--gold); transform: scale(1.25); }
+    .dot.done { background: var(--gold); }
+
+    .step { display: none; }
+    .step.current {
+      display: block;
+      animation: stepIn 250ms ease both;
+    }
+    @keyframes stepIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    fieldset { border: 0; }
+    legend {
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: 1.25rem;
+      color: var(--green);
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+    .field { margin-bottom: 1.15rem; }
+    .field > label, .micro-label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(79, 106, 91, 0.85);
+      margin-bottom: 0.35rem;
+    }
+    .sub-question {
+      display: block;
+      font-family: var(--sans);
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: 0;
+      text-transform: none;
+      color: var(--slate);
+      margin-bottom: 0.5rem;
+    }
+    .field .caption {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 300;
+      color: var(--slate);
+      text-transform: none;
+      letter-spacing: 0;
+      margin-top: 0.3rem;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    input[type="number"] {
+      width: 100%;
+      font-family: var(--sans);
+      font-size: 1.05rem;
+      color: var(--slate);
+      background: transparent;
+      border: 0;
+      border-bottom: 1px solid rgba(80, 87, 94, 0.35);
+      padding: 0.45rem 0.1rem;
+      border-radius: 0;
+      transition: border-color 250ms ease;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    input[type="date"] { min-height: 44px; }
+    input[type="date"]::-webkit-datetime-edit { color: var(--slate); }
+    input[type="date"]::-webkit-calendar-picker-indicator { opacity: 0.55; }
+    input:focus {
+      outline: none;
+      border-bottom: 2px solid var(--gold);
+    }
+    :focus-visible {
+      outline: 2px solid var(--green);
+      outline-offset: 3px;
+    }
+    input:focus:focus-visible { outline: none; }
+    .choice-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .choice-row input[type="radio"] {
+      position: absolute;
+      opacity: 0;
+      width: 1px; height: 1px;
+    }
+    .choice-row label {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      font-size: 0.95rem;
+      font-weight: 400;
+      text-transform: none;
+      letter-spacing: 0.02em;
+      color: var(--slate);
+      border: 1px solid rgba(80, 87, 94, 0.35);
+      border-radius: 999px;
+      padding: 0.62rem 1.25rem;
+      cursor: pointer;
+      margin: 0;
+      transition: background 250ms ease, color 250ms ease, border-color 250ms ease;
+    }
+    .choice-row input[type="radio"]:checked + label {
+      background: var(--green);
+      border-color: var(--green);
+      color: var(--stone);
+    }
+    .choice-row input[type="radio"]:focus-visible + label {
+      outline: 2px solid var(--green);
+      outline-offset: 3px;
+    }
+    .num-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.9rem 1.25rem;
+    }
+    .error {
+      display: none;
+      color: var(--crimson);
+      font-size: 0.85rem;
+      margin-top: 0.4rem;
+    }
+    .error.show { display: block; }
+    .nav-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 1.5rem;
+      gap: 1rem;
+    }
+    .btn {
+      font-family: var(--sans);
+      font-weight: 600;
+      font-size: 0.92rem;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      border-radius: 3px;
+      transition: background 250ms ease, color 250ms ease;
+    }
+    .btn-continue {
+      background: var(--green);
+      color: var(--stone);
+      border: 1px solid var(--green);
+      padding: 0.85rem 2rem;
+      min-height: 48px;
+      flex: 1;
+      text-transform: uppercase;
+    }
+    .btn-continue:hover { background: #435c4e; }
+    .btn-back {
+      background: transparent;
+      color: var(--slate);
+      border: 0;
+      padding: 0.8rem 0.75rem;
+      min-height: 48px;
+      letter-spacing: 0.02em;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: var(--gold);
+    }
+    .enter-hint {
+      display: none;
+      text-align: center;
+      font-size: 0.78rem;
+      font-weight: 300;
+      color: rgba(80, 87, 94, 0.7);
+      margin-top: 0.9rem;
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .enter-hint { display: block; }
+    }
+
+    /* Thank-you */
+    .thanks-copy {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 1.2rem;
+      color: var(--green);
+      line-height: 1.55;
+      text-align: center;
+      margin-bottom: 1.6rem;
+    }
+    .thanks-rule {
+      width: 56px;
+      height: 1px;
+      background: var(--gold);
+      margin: 0 auto 1.6rem;
+    }
+    .thanks-links {
+      text-align: center;
+      font-size: 1rem;
+    }
+    .thanks-links a {
+      color: var(--green);
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      text-decoration-color: var(--gold);
+    }
+    .thanks-teaser {
+      margin-top: 1.4rem;
+      text-align: center;
+      font-size: 0.92rem;
+      background: var(--stone);
+      border: 1px solid var(--hairline);
+      border-radius: 4px;
+      padding: 0.9rem 1rem;
+    }
+    .thanks-teaser a {
+      color: var(--green);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: var(--gold);
+    }
+
+    /* ---------- Below the fold ---------- */
+    section { padding: 5rem 1.5rem; }
+    .band-inner { max-width: 720px; margin: 0 auto; }
+
+    /* Shared warm treatment so the photos read as one family */
+    .photo-band img,
+    .keepsake-photo img,
+    .pillar-row img {
+      filter: saturate(0.82) sepia(0.08) brightness(1.02);
+    }
+
+    .photo-band {
+      width: 100%;
+      height: clamp(240px, 46vh, 440px);
+      overflow: hidden;
+    }
+    .photo-band img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+    }
+
+    /* Empathy + stakes */
+    .empathy {
+      background: var(--stone);
+      border-top: 1px solid var(--hairline-soft);
+      border-bottom: 1px solid var(--hairline-soft);
+      text-align: center;
+    }
+    .empathy p {
+      font-family: var(--sans);
+      font-weight: 300;
+      font-size: clamp(1.1rem, 3vw, 1.35rem);
+      line-height: 1.7;
+      color: var(--slate);
+      max-width: 30em;
+      margin: 0 auto;
+    }
+
+    /* The guide: mission */
+    .guide { text-align: center; }
+    .guide blockquote {
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 500;
+      font-size: clamp(1.5rem, 4.6vw, 2.3rem);
+      line-height: 1.42;
+      color: var(--green);
+      max-width: 21em;
+      margin: 0 auto 1.75rem;
+    }
+    .guide .authority {
+      font-family: var(--sans);
+      font-weight: 400;
+      font-size: 1rem;
+      color: var(--slate);
+      max-width: 36em;
+      margin: 1.75rem auto 0;
+    }
+
+    /* The plan: numbered editorial */
+    .plan {
+      background: var(--stone);
+      border-top: 1px solid var(--hairline-soft);
+      border-bottom: 1px solid var(--hairline-soft);
+    }
+    .plan-list {
+      max-width: 640px;
+      margin: 0 auto;
+      list-style: none;
+    }
+    .plan-step {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1.4rem;
+      align-items: start;
+      padding: 2.4rem 0;
+    }
+    .plan-step + .plan-step { border-top: 1px solid var(--hairline-soft); }
+    .plan-num {
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: clamp(2.2rem, 6vw, 3rem);
+      line-height: 1;
+      color: var(--gold);
+      min-width: 2ch;
+    }
+    .plan-step h3 {
+      font-size: clamp(1.25rem, 3.4vw, 1.5rem);
+      margin-bottom: 0.45rem;
+    }
+    .plan-step p {
+      font-size: 1rem;
+      max-width: 32em;
+    }
+
+    /* Pillars: alternating editorial rows */
+    .pillars { padding-bottom: 3rem; }
+    .pillar-rows { max-width: 960px; margin: 0 auto; }
+    .pillar-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      align-items: center;
+      padding: 2.5rem 0;
+    }
+    .pillar-row + .pillar-row { border-top: 1px solid var(--hairline-soft); }
+    .pillar-row figure {
+      overflow: hidden;
+      border-radius: 4px;
+      border: 1px solid var(--hairline);
+    }
+    .pillar-row img {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 3 / 2;
+      object-fit: cover;
+    }
+    .pillar-copy .pillar-label {
+      font-family: var(--sans);
+      font-weight: 600;
+      font-size: 0.72rem;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 0.6rem;
+    }
+    .pillar-copy h3 {
+      font-size: clamp(1.5rem, 4vw, 1.9rem);
+      margin-bottom: 0.6rem;
+    }
+    .pillar-copy .pillar-rule {
+      width: 44px;
+      height: 1px;
+      background: var(--gold);
+      margin-bottom: 0.9rem;
+    }
+    .pillar-copy p { font-size: 1.02rem; max-width: 30em; }
+    @media (min-width: 760px) {
+      .pillar-row {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        padding: 3rem 0;
+      }
+      .pillar-row.flip figure { order: 2; }
+      .pillar-row.flip .pillar-copy { order: 1; }
+    }
+
+    /* Scripture: the most beautiful moment */
+    .scripture {
+      background: var(--sage-tint);
+      border-top: 1px solid var(--hairline-soft);
+      border-bottom: 1px solid var(--hairline-soft);
+      text-align: center;
+      padding: 5.5rem 1.5rem;
+    }
+    .keepsake-photo {
+      max-width: 250px;
+      margin: 0 auto 2.5rem;
+      padding: 10px;
+      background: var(--stone);
+      border: 1px solid var(--hairline);
+      border-radius: 4px;
+      box-shadow: 0 1px 0 rgba(184, 154, 93, 0.12);
+      transform: rotate(-1deg);
+    }
+    .keepsake-photo img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      border-radius: 2px;
+    }
+    .scripture blockquote {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(1.25rem, 3.9vw, 1.7rem);
+      line-height: 1.6;
+      color: var(--slate);
+      margin: 1.9rem auto;
+      max-width: 26em;
+    }
+    .scripture cite {
+      display: block;
+      font-family: var(--sans);
+      font-style: normal;
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 1.2rem;
+    }
+
+    /* Success vision + assessment */
+    .assessment {
+      background: var(--navy);
+      color: var(--ivory);
+      padding: 5.5rem 1.5rem;
+    }
+    .assessment .band-inner { text-align: center; max-width: 640px; }
+    .assessment .vision {
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 500;
+      font-size: clamp(1.35rem, 4vw, 1.8rem);
+      line-height: 1.5;
+      color: var(--ivory);
+      margin-bottom: 2.25rem;
+    }
+    .assessment h2 {
+      color: var(--ivory);
+      font-size: clamp(1.6rem, 4.5vw, 2.1rem);
+      margin-bottom: 1rem;
+    }
+    .assessment .assess-rule {
+      width: 56px; height: 1px;
+      background: var(--gold);
+      margin: 0 auto 1.4rem;
+    }
+    .assessment p {
+      font-size: 1.02rem;
+      font-weight: 300;
+      margin-bottom: 0.85rem;
+    }
+    .assessment .coming {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 1.15rem;
+      color: var(--gold);
+      margin: 1.3rem 0 1.8rem;
+    }
+    .btn-assess {
+      display: inline-block;
+      background: transparent;
+      color: var(--ivory);
+      border: 1px solid var(--gold);
+      padding: 0.85rem 2.2rem;
+      min-height: 48px;
+      font-family: var(--sans);
+      font-weight: 600;
+      font-size: 0.92rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: background 250ms ease, color 250ms ease;
+    }
+    .btn-assess:hover { background: var(--gold); color: var(--navy); }
+    .on-list-note {
+      display: none;
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      color: var(--gold);
+    }
+    .on-list-note.show { display: block; }
+
+    footer {
+      background: var(--ivory);
+      border-top: 1px solid var(--hairline);
+      padding: 2.75rem 1.5rem 3.25rem;
+      text-align: center;
+    }
+    .footer-mark {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      color: var(--green);
+      margin-bottom: 0.9rem;
+    }
+    .word-someday { font-style: italic; font-weight: 500; }
+    .word-builders {
+      font-style: normal;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 0.85em;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+    .footer-links a {
+      color: var(--slate);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: var(--gold);
+    }
+    .footer-copy {
+      font-size: 0.8rem;
+      font-weight: 300;
+      color: rgba(80, 87, 94, 0.75);
+    }
+  </style>
+  <!-- analytics: paste GA4 or Plausible snippet here -->
+</head>
+<body>
+
+  <!-- ============ 1. HERO: the couple's story is the call ============ -->
+  <div class="hero" id="intake">
+    <header class="intake-brand">
+      <img class="brand-logo" src="assets/logo-wordmark.png" alt="Someday Builders" width="1881" height="271">
+    </header>
+    <!-- draft copy: client sign-off -->
+    <h1 class="hero-headline">Your someday starts with your story.</h1>
+    <!-- draft copy: client sign-off -->
+    <p class="hero-sub">For couples preparing for marriage, as well as couples and families already on the journey.</p>
+    <p class="tagline">Start building your Someday...</p>
+
+    <div class="intake-card">
+      <h2 class="intake-title">Share your someday story</h2>
+
+      <div class="dots" id="dots" aria-hidden="true">
+        <span class="dot" data-step="1"></span>
+        <span class="dot" data-step="2"></span>
+        <span class="dot" data-step="3"></span>
+        <span class="dot" data-step="4"></span>
+        <span class="dot" data-step="5"></span>
+      </div>
+
+      <form id="storyForm" novalidate>
+        <div id="stepAnnounce" aria-live="polite" class="visually-hidden"></div>
+
+        <!-- Step 1 -->
+        <section class="step current" data-step="1">
+          <fieldset>
+            <legend>What's your name?</legend>
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" autocapitalize="words" enterkeyhint="next">
+              <p class="error" id="nameError">Please enter your name.</p>
+            </div>
+            <div class="field">
+              <span class="micro-label" id="genderLabel">Gender</span>
+              <div class="choice-row" role="radiogroup" aria-labelledby="genderLabel">
+                <input type="radio" id="genderMale" name="gender" value="Male">
+                <label for="genderMale">Male</label>
+                <input type="radio" id="genderFemale" name="gender" value="Female">
+                <label for="genderFemale">Female</label>
+              </div>
+            </div>
+          </fieldset>
+        </section>
+
+        <!-- Step 2 -->
+        <section class="step" data-step="2" hidden>
+          <fieldset>
+            <legend>When is your birthday?</legend>
+            <div class="field">
+              <label for="birthday">Birthday</label>
+              <input type="date" id="birthday" name="birthday" autocomplete="bday" enterkeyhint="next">
+            </div>
+            <div class="field">
+              <span class="sub-question" id="maritalLabel">Are you married?</span>
+              <div class="choice-row" role="radiogroup" aria-labelledby="maritalLabel">
+                <input type="radio" id="msMarried" name="maritalStatus" value="Married">
+                <label for="msMarried">Married</label>
+                <input type="radio" id="msEngaged" name="maritalStatus" value="Engaged">
+                <label for="msEngaged">Engaged</label>
+                <input type="radio" id="msSingle" name="maritalStatus" value="Single">
+                <label for="msSingle">Single</label>
+                <input type="radio" id="msDivorced" name="maritalStatus" value="Divorced">
+                <label for="msDivorced">Divorced</label>
+              </div>
+            </div>
+          </fieldset>
+        </section>
+
+        <!-- Step 3 (married only) -->
+        <section class="step" data-step="3" hidden>
+          <fieldset>
+            <legend id="spouseLegend">Tell us about your marriage</legend>
+            <div class="field">
+              <label class="sub-question" for="spouseName" id="spouseNameLabel">What's your spouse's name?</label>
+              <input type="text" id="spouseName" name="spouseName" autocapitalize="words" enterkeyhint="next">
+            </div>
+            <div class="field">
+              <label class="sub-question" for="anniversary" id="anniversaryLabel">When is your wedding anniversary?</label>
+              <input type="date" id="anniversary" name="anniversary" enterkeyhint="next">
+            </div>
+          </fieldset>
+        </section>
+
+        <!-- Step 4 -->
+        <section class="step" data-step="4" hidden>
+          <fieldset>
+            <legend>Do you have children?</legend>
+            <div class="field">
+              <div class="num-grid">
+                <div>
+                  <label for="boys">Boys</label>
+                  <input type="number" id="boys" name="boys" min="0" max="30" inputmode="numeric" placeholder="0" enterkeyhint="next">
+                </div>
+                <div>
+                  <label for="girls">Girls</label>
+                  <input type="number" id="girls" name="girls" min="0" max="30" inputmode="numeric" placeholder="0" enterkeyhint="next">
+                </div>
+              </div>
+            </div>
+            <div class="field">
+              <span class="sub-question">Do you have grandchildren?</span>
+              <div class="num-grid">
+                <div>
+                  <label for="grandBoys">Boys</label>
+                  <input type="number" id="grandBoys" name="grandBoys" min="0" max="60" inputmode="numeric" placeholder="0" enterkeyhint="next">
+                </div>
+                <div>
+                  <label for="grandGirls">Girls</label>
+                  <input type="number" id="grandGirls" name="grandGirls" min="0" max="60" inputmode="numeric" placeholder="0" enterkeyhint="next">
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </section>
+
+        <!-- Step 5 -->
+        <section class="step" data-step="5" hidden>
+          <fieldset>
+            <legend>What's your email address?</legend>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" inputmode="email" enterkeyhint="done">
+              <span class="caption">so we can send your someday story and what's coming next</span>
+              <p class="error" id="emailError">Please enter a valid email address.</p>
+            </div>
+          </fieldset>
+        </section>
+
+        <!-- Step 6: thank you -->
+        <section class="step" data-step="6" hidden>
+          <p class="thanks-copy">Thank you for sharing a little bit of your someday story with us!  We look forward to being a part of helping you build your someday in the days ahead!</p>
+          <div class="thanks-rule"></div>
+          <p class="thanks-links"><a href="#pillars">Explore counseling, community, and events &amp; retreats</a></p>
+          <p class="thanks-teaser"><a href="#assessment">The Someday Assessment, coming this September</a></p>
+        </section>
+
+        <div class="nav-row" id="navRow">
+          <button type="button" class="btn btn-back" id="backBtn" hidden>Back</button>
+          <button type="button" class="btn btn-continue" id="continueBtn">Begin your story</button>
+        </div>
+        <p class="enter-hint" id="enterHint">Press Enter to continue</p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Photography: Unsplash (free license) -->
+  <div class="photo-band">
+    <img src="assets/photo-hands-2.jpg" alt="A couple holding hands walking through tall grass at golden hour" width="1600" height="1067" loading="lazy" decoding="async">
+  </div>
+
+  <!-- ============ 2. EMPATHY + STAKES ============ -->
+  <section class="empathy">
+    <div class="band-inner">
+      <p class="eyebrow">For every couple</p>
+      <!-- draft copy: client sign-off -->
+      <p>Legacies aren&rsquo;t built by accident. Most couples are handed a ceremony and a honeymoon, then left to figure out the rest on their own. You were never meant to build without a guide&hellip;and a community.</p>
+    </div>
+  </section>
+
+  <!-- ============ 3. THE GUIDE: mission ============ -->
+  <section class="guide">
+    <div class="band-inner">
+      <p class="eyebrow">Our mission</p>
+      <blockquote>Creating legacies by building healthy, Christ-centered marriages and families from the start through science, spiritual formation, and community.</blockquote>
+      <div class="rule"></div>
+      <!-- draft copy: client sign-off -->
+      <p class="authority">Our approach pairs scientifically rigorous assessments from Dr. Coker with spiritual formation and real community.</p>
+    </div>
+  </section>
+
+  <!-- ============ 4. THE PLAN: 01 / 02 / 03 ============ -->
+  <section class="plan" aria-labelledby="planHeading">
+    <div class="band-inner">
+      <p class="eyebrow" id="planHeading">How it works</p>
+      <ol class="plan-list">
+        <li class="plan-step">
+          <span class="plan-num" aria-hidden="true">01</span>
+          <div>
+            <h3>Share your someday story</h3>
+            <!-- draft copy: client sign-off -->
+            <p>It takes about two minutes and tells us who you are.</p>
+          </div>
+        </li>
+        <li class="plan-step">
+          <span class="plan-num" aria-hidden="true">02</span>
+          <div>
+            <h3>Take the Someday Assessment</h3>
+            <!-- draft copy: client sign-off -->
+            <p>Proprietary and backed by research, coming this September. The list gets it first.</p>
+          </div>
+        </li>
+        <li class="plan-step">
+          <span class="plan-num" aria-hidden="true">03</span>
+          <div>
+            <h3>Build together</h3>
+            <!-- draft copy: client sign-off -->
+            <p>Counseling, community, and events &amp; retreats that strengthen your marriage and family.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ 5. THREE PILLARS: editorial rows ============ -->
+  <section class="pillars" id="pillars" aria-labelledby="pillarsHeading">
+    <h2 id="pillarsHeading" class="visually-hidden">Counseling, Community, and Events &amp; Retreats</h2>
+    <div class="pillar-rows">
+      <article class="pillar-row">
+        <figure>
+          <img src="assets/photo-counseling.jpg" alt="Two people talking quietly over coffee mugs at a table" width="1600" height="1067" loading="lazy" decoding="async">
+        </figure>
+        <div class="pillar-copy">
+          <span class="pillar-label">Pillar one</span>
+          <h3>Counseling</h3>
+          <div class="pillar-rule"></div>
+          <p>Premarital and marital counseling rooted in science and scripture.</p>
+        </div>
+      </article>
+      <article class="pillar-row flip">
+        <figure>
+          <img src="assets/photo-events.jpg" alt="Friends sharing dinner at a long table under string lights" width="900" height="1200" loading="lazy" decoding="async">
+        </figure>
+        <div class="pillar-copy">
+          <span class="pillar-label">Pillar two</span>
+          <h3>Community</h3>
+          <div class="pillar-rule"></div>
+          <p>Monthly SomedayBuilders Family Reunions &amp; Couples Community Nights.</p>
+        </div>
+      </article>
+      <article class="pillar-row">
+        <figure>
+          <img src="assets/photo-retreats.jpg" alt="A wooden cabin in golden morning mist" width="800" height="1200" loading="lazy" decoding="async">
+        </figure>
+        <div class="pillar-copy">
+          <span class="pillar-label">Pillar three</span>
+          <h3>Events &amp; Retreats</h3>
+          <div class="pillar-rule"></div>
+          <p>Special moments throughout the year to celebrate and grow your legacy.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ 6. SCRIPTURE ============ -->
+  <section class="scripture">
+    <div class="band-inner">
+      <figure class="keepsake-photo">
+        <img src="assets/photo-legacy-hands.jpg" alt="An engaged couple holding hands in warm golden light" width="800" height="1200" loading="lazy" decoding="async">
+      </figure>
+      <div class="rule"></div>
+      <blockquote>
+        &ldquo;This mystery is profound, and I am saying that it refers to&hellip; Christ and the church.&rdquo;
+        <cite>Ephesians 5:32</cite>
+      </blockquote>
+      <div class="rule"></div>
+    </div>
+  </section>
+
+  <!-- ============ 7. SUCCESS VISION + ASSESSMENT ============ -->
+  <section class="assessment" id="assessment">
+    <div class="band-inner">
+      <!-- draft copy: client sign-off -->
+      <p class="vision">Marriages and families that thrive, and a legacy that reaches beyond you.</p>
+      <h2>The Someday Assessment</h2>
+      <div class="assess-rule"></div>
+      <p>Proprietary assessments from Dr. Coker, backed by scientific rigor. Premarital, marriage, and family health, all in one place.</p>
+      <p class="coming">Coming this September. The list gets it first.</p>
+      <button type="button" class="btn-assess" id="assessBtn">Join the list</button>
+      <p class="on-list-note" id="onListNote">You're on the list.</p>
+    </div>
+  </section>
+
+  <!-- ============ 8. FOOTER ============ -->
+  <footer>
+    <p class="footer-mark"><span class="word-someday">Someday</span>&nbsp;<span class="word-builders">Builders</span></p>
+    <nav class="footer-links" aria-label="Footer">
+      <!-- LAUNCH: add Instagram and Substack links here once real URLs exist. See LAUNCH-CHECKLIST.md.
+           <a href="https://instagram.com/...">Instagram</a>
+           <a href="https://....substack.com">Substack</a> -->
+      <a href="resources.html">Resources</a>
+      <a href="mailto:hello@somedaybuilders.com">hello@somedaybuilders.com</a>
+    </nav>
+    <p class="footer-copy">&copy; 2026 Someday Builders</p>
+  </footer>
+
+  <script>
+    /* ==========================================================================
+       TODO BEFORE LAUNCH: wire the form endpoint. Two options:
+
+       Option A, Formspree (fastest):
+         1. Create a form at https://formspree.io (free tier is fine).
+         2. Copy the endpoint URL, e.g. "https://formspree.io/f/abcdwxyz".
+         3. Paste it into FORM_ENDPOINT below. Done. Formspree accepts the
+            JSON POST this page already sends and emails each submission.
+
+       Option B, Cloudflare Worker (keeps data in your own hands):
+         1. Create a Worker that accepts POST JSON and writes to KV/D1 or
+            forwards to an email service.
+         2. Allow CORS from the site's domain (Access-Control-Allow-Origin).
+         3. Paste the Worker URL into FORM_ENDPOINT below.
+
+       Until FORM_ENDPOINT is set, every submission is saved to
+       localStorage under "somedayStories" (an array) and logged to the
+       console, so nothing is lost on the visitor's device, but nothing
+       reaches the client either. This is a launch gate: see
+       LAUNCH-CHECKLIST.md in this folder.
+       ========================================================================== */
+    const FORM_ENDPOINT = "";
+
+    (function () {
+      "use strict";
+
+      const form = document.getElementById("storyForm");
+      const steps = Array.from(form.querySelectorAll(".step"));
+      const dots = Array.from(document.querySelectorAll(".dot"));
+      const backBtn = document.getElementById("backBtn");
+      const continueBtn = document.getElementById("continueBtn");
+      const navRow = document.getElementById("navRow");
+      const enterHint = document.getElementById("enterHint");
+      const announce = document.getElementById("stepAnnounce");
+      const nameError = document.getElementById("nameError");
+      const emailError = document.getElementById("emailError");
+      const assessBtn = document.getElementById("assessBtn");
+      const onListNote = document.getElementById("onListNote");
+      const card = document.querySelector(".intake-card");
+
+      let current = 1;      // 1..6
+      let completed = false;
+      let maritalAnswered = false;
+      const answered = new Set();  // steps actually completed by the visitor
+
+      function maritalStatus() {
+        const checked = form.querySelector('input[name="maritalStatus"]:checked');
+        return checked ? checked.value : "";
+      }
+
+      function isMarried() { return maritalStatus() === "Married"; }
+      function isEngaged() { return maritalStatus() === "Engaged"; }
+      function hasPartner() { return isMarried() || isEngaged(); }
+
+      // The live sequence of input steps. Step 3 leaves the sequence only
+      // after the visitor has actually chosen Single or Divorced.
+      function sequence() {
+        return (maritalAnswered && !hasPartner()) ? [1, 2, 4, 5] : [1, 2, 3, 4, 5];
+      }
+
+      // Step 3 speaks marriage or engagement, depending on the answer.
+      function updateSpouseStepCopy() {
+        const engaged = isEngaged();
+        document.getElementById("spouseLegend").textContent =
+          engaged ? "Tell us about your engagement" : "Tell us about your marriage";
+        document.getElementById("spouseNameLabel").textContent =
+          engaged ? "What's your fiancé's name?" : "What's your spouse's name?";
+        document.getElementById("anniversaryLabel").textContent =
+          engaged ? "When is your wedding date?" : "When is your wedding anniversary?";
+      }
+
+      function updateDots(n) {
+        const seq = sequence();
+        dots.forEach(function (d) {
+          const dn = Number(d.dataset.step);
+          d.hidden = seq.indexOf(dn) === -1;
+          d.classList.toggle("active", dn === n);
+          // Only steps the visitor actually answered paint as done; a
+          // skipped-ahead jump leaves untouched dots hollow.
+          d.classList.toggle("done", answered.has(dn) && dn !== n);
+        });
+      }
+
+      function buttonLabel(n) {
+        if (n === 5) return "Share my story";
+        if (n === 1) return "Begin your story";
+        return "Continue";
+      }
+
+      function showStep(n, goingBack) {
+        // Skip the spouse step for Single / Divorced
+        if (n === 3 && maritalAnswered && !hasPartner()) {
+          n = goingBack ? 2 : 4;
+        }
+        if (n === 3) updateSpouseStepCopy();
+        current = n;
+        steps.forEach(function (s) {
+          const isCurrent = Number(s.dataset.step) === n;
+          s.hidden = !isCurrent;
+          s.classList.toggle("current", isCurrent);
+        });
+        updateDots(n);
+        const onThanks = n === 6;
+        navRow.hidden = onThanks;
+        enterHint.hidden = onThanks;
+        backBtn.hidden = onThanks || n === 1;
+        continueBtn.textContent = buttonLabel(n);
+        if (onThanks) {
+          announce.textContent = "Thank you. Your story has been shared.";
+        } else {
+          const seq = sequence();
+          announce.textContent = "Question " + (seq.indexOf(n) + 1) + " of " + seq.length;
+          const firstInput = steps[n - 1].querySelector("input");
+          if (firstInput && /^(text|email|date)$/.test(firstInput.type)) {
+            firstInput.focus({ preventScroll: true });
+          }
+        }
+      }
+
+      function validEmail(v) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim());
+      }
+
+      function validateCurrent() {
+        if (current === 1) {
+          const nameOk = document.getElementById("name").value.trim().length > 0;
+          nameError.classList.toggle("show", !nameOk);
+          return nameOk;
+        }
+        if (current === 5) {
+          const emailOk = validEmail(document.getElementById("email").value);
+          emailError.classList.toggle("show", !emailOk);
+          return emailOk;
+        }
+        return true;
+      }
+
+      function collectPayload() {
+        const val = function (id) { return document.getElementById(id).value.trim(); };
+        const radio = function (name) {
+          const r = form.querySelector('input[name="' + name + '"]:checked');
+          return r ? r.value : "";
+        };
+        const payload = {
+          name: val("name"),
+          gender: radio("gender"),
+          birthday: val("birthday"),
+          maritalStatus: radio("maritalStatus"),
+          children: { boys: val("boys") || "0", girls: val("girls") || "0" },
+          grandchildren: { boys: val("grandBoys") || "0", girls: val("grandGirls") || "0" },
+          email: val("email"),
+          submittedAt: new Date().toISOString()
+        };
+        if (hasPartner()) {
+          if (isEngaged()) {
+            payload.fianceName = val("spouseName");
+            payload.weddingDate = val("anniversary");
+          } else {
+            payload.spouseName = val("spouseName");
+            payload.anniversary = val("anniversary");
+          }
+        }
+        return payload;
+      }
+
+      function persistLocally(payload) {
+        // Backstop: keep the story on-device even with no endpoint or a
+        // failed network call.
+        try {
+          const stories = JSON.parse(localStorage.getItem("somedayStories") || "[]");
+          stories.push(payload);
+          localStorage.setItem("somedayStories", JSON.stringify(stories));
+        } catch (err) {
+          console.log("Could not persist someday story locally:", err);
+        }
+      }
+
+      function submitStory() {
+        const payload = collectPayload();
+        completed = true;
+        persistLocally(payload);
+        // Never block the thank-you screen on the network.
+        if (FORM_ENDPOINT) {
+          try {
+            fetch(FORM_ENDPOINT, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(payload)
+            }).catch(function (err) {
+              console.log("Someday story could not reach the endpoint (saved locally):", err);
+            });
+          } catch (err) {
+            console.log("Someday story submit error (saved locally):", err);
+          }
+        } else {
+          console.log("FORM_ENDPOINT is empty. Someday story payload (also saved to localStorage):", payload);
+        }
+        showStep(6, false);
+      }
+
+      function next() {
+        if (current >= 6) return;
+        if (!validateCurrent()) return;
+        answered.add(current);
+        if (current === 5) {
+          submitStory();
+        } else {
+          showStep(current + 1, false);
+        }
+      }
+
+      function back() {
+        if (current > 1 && current < 6) showStep(current - 1, true);
+      }
+
+      continueBtn.addEventListener("click", next);
+      backBtn.addEventListener("click", back);
+
+      form.addEventListener("submit", function (e) { e.preventDefault(); });
+
+      form.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" && current < 6) {
+          const t = e.target;
+          if (t && t.tagName === "INPUT") {
+            e.preventDefault();
+            next();
+          }
+        }
+      });
+
+      // The skipped-step state only exists after marital status is chosen.
+      Array.from(form.querySelectorAll('input[name="maritalStatus"]')).forEach(function (r) {
+        r.addEventListener("change", function () {
+          maritalAnswered = true;
+          updateDots(current);
+        });
+      });
+
+      // Clear errors as the visitor types
+      document.getElementById("name").addEventListener("input", function () {
+        nameError.classList.remove("show");
+      });
+      document.getElementById("email").addEventListener("input", function () {
+        emailError.classList.remove("show");
+      });
+
+      // Assessment button: jump straight to the email step (fields before it
+      // stay optional), or confirm if the story is already shared.
+      assessBtn.addEventListener("click", function () {
+        if (completed) {
+          onListNote.classList.add("show");
+          return;
+        }
+        showStep(5, false);
+        card.scrollIntoView({ behavior: "smooth", block: "center" });
+        const email = document.getElementById("email");
+        setTimeout(function () { email.focus({ preventScroll: true }); }, 400);
+      });
+
+      showStep(1, false);
+    })();
+  </script>
+</body>
+</html>
